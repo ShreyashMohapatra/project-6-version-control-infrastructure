@@ -1,0 +1,54 @@
+clouduser@AZLTT0222435e27:~$ git clone https://github.com/ShreyashMohapatra/project-6-version-control-infrastructure.git
+Cloning into 'project-6-version-control-infrastructure'...
+warning: You appear to have cloned an empty repository.
+clouduser@AZLTT0222435e27:~$ cd project-6-version-control-infrastructure
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ nano main.tf
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ cat main.tf
+resource "null_resource" "project6" {}
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git add .
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   main.tf
+
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git commit -m "Initial Terraform code"
+[main (root-commit) 7a36461] Initial Terraform code
+ 1 file changed, 1 insertion(+)
+ create mode 100644 main.tf
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 263 bytes | 263.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ShreyashMohapatra/project-6-version-control-infrastructure.git
+ * [new branch]      main -> main
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git checkout -b feature/add-tags
+Switched to a new branch 'feature/add-tags'
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ nano main.tf
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git add .
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git status
+On branch feature/add-tags
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   main.tf
+
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git commit -m "Added triggers block"
+[feature/add-tags 5cebbb7] Added triggers block
+ 1 file changed, 6 insertions(+)
+clouduser@AZLTT0222435e27:~/project-6-version-control-infrastructure$ git push origin feature/add-tags
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature/add-tags' on GitHub by visiting:
+remote:      https://github.com/ShreyashMohapatra/project-6-version-control-infrastructure/pull/new/feature/add-tags
+remote: 
+To https://github.com/ShreyashMohapatra/project-6-version-control-infrastructure.git
+ * [new branch]      feature/add-tags -> feature/add-tags
